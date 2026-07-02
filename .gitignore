@@ -1,0 +1,82 @@
+# -----------------------------------------------------------------------------
+# Basalt.DesktopHUB - Git 忽略规则
+#
+# Rainmeter 源文件（*.ini / *.inc）、文档和美术资源应纳入版本控制。
+# 下列规则仅忽略本机工具状态、缓存、临时文件、日志和生成的发布产物。
+# -----------------------------------------------------------------------------
+
+# Codex 与本地自动化工具状态
+# 这些目录包含当前计算机上的代理元数据，不属于皮肤运行依赖。
+/.agents/
+/.codex/
+
+# Visual Studio Code
+# 保留团队共用的文件关联和扩展建议，忽略其余个人工作区状态。
+/.vscode/*
+!/.vscode/settings.json
+!/.vscode/extensions.json
+*.code-workspace
+
+# 其他编辑器与 IDE
+/.idea/
+/.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.swp
+*.swo
+
+# Windows 与 macOS 文件系统元数据
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
+
+# 临时文件、备份文件与合并冲突残留
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*~
+~$*
+.~lock.*#
+
+# 日志、崩溃转储与诊断输出
+*.log
+*.dmp
+*.stackdump
+/logs/
+/Logs/
+
+# Rainmeter 打包暂存目录
+# .rmskin 发布包由 .gitattributes 交给 Git LFS 管理，因此不在此忽略。
+# 这里只忽略构建过程中可以重新生成的中间目录。
+/build/
+/dist/
+/release/
+/packages/
+/@Backup/
+
+# 常见工具缓存与覆盖率输出
+/.cache/
+/.pytest_cache/
+/.mypy_cache/
+/.ruff_cache/
+/__pycache__/
+*.py[cod]
+/node_modules/
+/coverage/
+/.coverage
+
+# 本地环境变量与敏感配置
+# 示例或模板文件通过反向规则继续纳入版本控制。
+.env
+.env.*
+!.env.example
+!.env.template
