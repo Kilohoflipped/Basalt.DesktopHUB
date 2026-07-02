@@ -35,10 +35,10 @@ HeaderCodeY=(#PanelPaddingY#-#HeaderCodeFontSize#*0.7)
 HeaderCodeFontSize=11.5
 
 ; HeaderMark位置
-HeaderMarkX=(#PanelW#-#PanelPaddingX#*0.1-#HeaderMarkFontSize#*0.5)
-HeaderMarkY=(-#PanelPaddingX#*0.1)
+HeaderMarkX=(#PanelW#-#PanelPaddingX#*0.3-#HeaderMarkFontSize#*0.8)
+HeaderMarkY=(#PanelPaddingX#*0.3)
 ; HeaderMark几何
-HeaderMarkFontSize=90
+HeaderMarkFontSize=45
 
 ; Time位置
 GeneralTimeY=(#HeaderCodeY#+38)
