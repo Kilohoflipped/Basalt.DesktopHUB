@@ -2,10 +2,27 @@
 Measure=Time
 Format=%H:%M
 
-[MeasureDate]
+[MeasureYear]
 Measure=Time
-Format=%Y.%m.%d
+Format=%Y
+
+[MeasureMonth]
+Measure=Time
+Format=%#m
+
+[MeasureMeasureMonthWord]
+Measure=Time
+Format=%B
 
 [MeasureDay]
 Measure=Time
+Format=%#d
+
+[MeasureWeekday]
+Measure=Time
 Format=%A
+
+[MeasureWeekdayCJK]
+Measure=Time
+Format=%w
+Substitute=#WeekdaySubstitute#
