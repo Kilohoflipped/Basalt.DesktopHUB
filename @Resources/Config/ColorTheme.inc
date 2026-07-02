@@ -70,7 +70,7 @@ ColorForegroundLinkSecondaryPressed=#Neutral600#
 
 ; 根画布。
 ; 用于整个 Skin、主窗口区域或最外层内容背景。
-ColorNeutralBackgroundCanvas=#Neutral000#
+ColorNeutralBackgroundCanvas=#Neutral000AlphaE2#
 
 ; 常规中性填充。
 ; 用于默认可见的中性按钮、列表项、、带背景的工具项、输入区域等填充型表面等。
@@ -89,8 +89,8 @@ ColorNeutralBackgroundSubtleSelected=#Neutral200#
 ; 卡片 / 瓦片表面。
 ; 用于 Tile、信息卡、可点击面板、设置项、独立内容块等。
 ; 与主画布及一般中性填充保持独立，以便日后调整层级。
-ColorNeutralBackgroundCard=#Neutral100#
-ColorNeutralBackgroundCardHover=#Neutral200#
+ColorNeutralBackgroundCard=#Neutral100AlphaC2#
+ColorNeutralBackgroundCardHover=#Neutral200Alpha82#
 ColorNeutralBackgroundCardPressed=#Neutral000#
 ColorNeutralBackgroundCardSelected=#Neutral200#
 
@@ -163,7 +163,7 @@ ColorNeutralStencilSecondary=#Neutral200#
 ColorNeutralStrokeAccessible=#Neutral400#
 ColorNeutralStrokeAccessibleHover=#Neutral500#
 ColorNeutralStrokeAccessiblePressed=#Neutral400#
-ColorNeutralStrokeAccessibleSelected=#Neutral500#
+ColorNeutralStrokeAccessibleSelected=#ColorBrandStroke#
 
 ; 常规中性描边。
 ; 用于普通按钮、输入框、卡片、列表项等默认边界。
@@ -182,7 +182,7 @@ ColorNeutralStrokeTertiary=#Neutral200#
 
 ; 微弱中性描边。
 ; 用于极弱容器轮廓、暗色面板内侧边缘、非关键分组边界等。
-ColorNeutralStrokeSubtle=#Neutral000#
+ColorNeutralStrokeSubtle=#Neutral000Alpha2E#
 
 ; 禁用描边。
 ; 用于禁用控件的主要边界。
@@ -243,7 +243,6 @@ ColorBackgroundOverlay=#Neutral000#80
 
 ; 滚动条覆盖层。
 ColorScrollbarOverlay=#Neutral000#99
-
 
 
 
