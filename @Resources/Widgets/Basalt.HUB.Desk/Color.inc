@@ -1,7 +1,4 @@
 [Variables]
-; 主容器的颜色
-ColorPanelFill=#ColorNeutralBackgroundCanvas#E2
-ColorPanelBorder=#ColorNeutralStrokeSubtle#2E
 
 TileFill=255,255,255,10
 TileBorder=255,255,255,28

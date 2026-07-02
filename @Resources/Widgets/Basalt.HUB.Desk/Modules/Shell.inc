@@ -2,5 +2,5 @@
 Meter=Shape
 X=0
 Y=0
-Shape=#PanelShape# | Fill Color #ColorPanelFill# | StrokeWidth #PanelBorderWidth# | Stroke Color #ColorPanelBorder#
+Shape=#PanelShape# | Fill Color #ColorNeutralBackgroundCanvas# | StrokeWidth #PanelBorderWidth# | Stroke Color #ColorNeutralStrokeSubtle#
 

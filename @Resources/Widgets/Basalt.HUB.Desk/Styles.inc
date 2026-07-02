@@ -1,21 +1,18 @@
-[MeterStyleCardNumber]
-MeterStyle=MeterStyleMono
-FontSize=10
-FontColor=#Accent#
-
 [MeterStyleCardTitle]
-MeterStyle=MeterStylePrimary
-FontSize=16
-FontColor=#TextPrimary#
-StringStyle=Bold
+AntiAlias=1
+FontSize=#TileItemTitleSize#
+FontColor=#ColorNeutralForegroundSecondary#
+FontFace=#FontPrimaryMedium#
 
 [MeterStyleCardSubtitle]
-MeterStyle=MeterStyleMono
-FontSize=9
-FontColor=#TextSecondary#
+AntiAlias=1
+FontSize=#TileItemSubtitleSize#
+FontColor=#ColorNeutralForegroundSecondary#
+FontFace=#FontPrimary#
 
 [MeterStyleCardArrow]
+AntiAlias=1
 MeterStyle=MeterStylePrimary
-FontSize=27
+FontSize=#TileItemArrowSize#
 FontColor=#Accent#
 StringAlign=Right
