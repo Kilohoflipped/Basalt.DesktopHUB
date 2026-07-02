@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="@Resources/Assets/Logos/Star.png" width="252" alt="Basalt Desktop HUB 标识">
+  <img src="https://media.githubusercontent.com/media/Kilohoflipped/Basalt.DesktopHUB/master/@Resources/Assets/Logos/Star.png?v=e3d2f93" width="252" alt="Basalt Desktop HUB 标识">
 
   <h1>Basalt.DesktopHUB</h1>
 
