@@ -1,0 +1,6 @@
+root = true
+
+# Rainmeter 本地化字符串表必须保持 UTF-16 LE。
+[**/Strings.inc]
+charset = utf-16le
+end_of_line = crlf

@@ -15,10 +15,9 @@
 *.ini text eol=crlf
 *.inc text eol=crlf
 
-# 本地化字符串表包含中文，工作区必须保持 UTF-16 LE BOM。
+# 所有本地化字符串表包含中文，工作区必须保持 UTF-16 LE BOM。
 # Git 内部会保存规范化后的 UTF-8 内容，使历史记录与差异仍然可读。
-/@Resources/Config/Strings.inc                   text eol=crlf working-tree-encoding=UTF-16LE-BOM
-/@Resources/Widgets/Basalt.HUB.Desk/Strings.inc text eol=crlf working-tree-encoding=UTF-16LE-BOM
+**/Strings.inc text eol=crlf working-tree-encoding=UTF-16LE-BOM
 
 # 仓库控制文件与常见文档使用 LF，方便跨平台查看和审阅。
 .gitignore     text eol=lf

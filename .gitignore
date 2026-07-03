@@ -74,6 +74,11 @@ $RECYCLE.BIN/
 /coverage/
 /.coverage
 
+# Rainmeter 本机覆盖配置
+# 保存个人快捷路径和本机专用入口，不提交到远程仓库。
+*.local.inc
+*.local.ini
+
 # 本地环境变量与敏感配置
 # 示例或模板文件通过反向规则继续纳入版本控制。
 .env
