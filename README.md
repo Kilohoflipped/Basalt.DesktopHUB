@@ -1,12 +1,12 @@
 <div align="center">
-  <img src="https://media.githubusercontent.com/media/Kilohoflipped/Basalt.DesktopHUB/master/@Resources/Assets/Logos/Star.png?v=e3d2f93" width="252" alt="Basalt Desktop HUB 标识">
-
   <h1>Basalt.DesktopHUB</h1>
 
   <p>
     一座安静驻留于 Windows 桌面的本地访问终端。<br>
     用模块化 Rainmeter 皮肤组织时间、状态与六组常用入口。
   </p>
+
+  <img src="https://media.githubusercontent.com/media/Kilohoflipped/Basalt.DesktopHUB/master/@Resources/Assets/Logos/Star.png?v=e3d2f93" width="96" alt="Basalt Desktop HUB 标识">
 
   <p>
     <img alt="Rainmeter" src="https://img.shields.io/badge/Rainmeter-Skin-1F2328?style=flat-square">
@@ -26,7 +26,7 @@
 
 <table>
   <tr>
-    <td align="center"><img src="@Resources/Assets/Icons/WorkSpace.png" width="72" alt="工作区"><br><b>工作区</b><br><sub>Workspace</sub></td>
+    <td align="center"><img src="@Resources/Assets/Icons/Workspace.png" width="72" alt="工作区"><br><b>工作区</b><br><sub>Workspace</sub></td>
     <td align="center"><img src="@Resources/Assets/Icons/Inbox.png" width="72" alt="收件箱"><br><b>收件箱</b><br><sub>Inbox</sub></td>
     <td align="center"><img src="@Resources/Assets/Icons/Academics.png" width="72" alt="学业"><br><b>学业</b><br><sub>Academics</sub></td>
     <td align="center"><img src="@Resources/Assets/Icons/Studio.png" width="72" alt="创作"><br><b>创作</b><br><sub>Studio</sub></td>
@@ -76,24 +76,24 @@ git clone https://github.com/Kilohoflipped/Basalt.DesktopHUB.git
 
 ## 配置快捷入口
 
-快捷入口集中定义在：
+快捷入口的显示内容与目标路径分别定义在：
 
 ```text
-@Resources\Widgets\Basalt.HUB.Desk\Strings.inc
+@Resources\Widgets\Basalt.HUB.Desk\Strings.inc   # 标题、图标和界面文案
+@Resources\Widgets\Basalt.HUB.Desk\Settings.inc  # 快捷入口目标路径
 ```
 
-每个入口由标题、副标题、图标、箭头和路径组成：
+下载后的快捷路径默认为空。打开 `Settings.inc`，填写需要访问的文件夹、文件或 Windows Library：
 
 ```ini
-Item1Title=工作区
-Item1Subtitle=Workspace
-Item1Icon=Icons\Workspace.png
-Item1Arrow=›
-Item1Path=C:\Path\To\Your\Folder
+[Variables]
+Item1Path=%APPDATA%\Microsoft\Windows\Libraries\your-library.library-ms
+Item2Path=D:\Your\Inbox
+Item3Path=
+Item4Path=
+Item5Path=
+Item6Path=
 ```
-
-> [!IMPORTANT]
-> 仓库中的部分 `ItemNPath` 是开发者计算机上的绝对路径，另一些暂时为空。首次使用时请将它们改成你自己的文件夹、文件或 `.library-ms` 路径。
 
 访问卡片使用以下动作显式调用资源管理器：
 
@@ -101,11 +101,7 @@ Item1Path=C:\Path\To\Your\Folder
 LeftMouseUpAction=["explorer.exe" "#Item1Path#"]
 ```
 
-这也适用于 Windows Library，例如：
-
-```ini
-Item1Path=C:\Users\YourName\AppData\Roaming\Microsoft\Windows\Libraries\Workspace.library-ms
-```
+本地设置可以指向普通文件夹、文件或实际存在的 Windows `.library-ms` 文件。
 
 ## 字体
 
@@ -179,7 +175,7 @@ Neutral000AlphaE2=090A0BE2
 ```text
 Basalt.DesktopHUB/
 ├─ Basalt.HUB.Desk/
-│  └─ Basalt.HUB.Desk.ini          # Rainmeter 入口
+│  └─ Basalt.HUB.Desk.ini          # 公共 Rainmeter 入口
 ├─ @Resources/
 │  ├─ Assets/
 │  │  ├─ Icons/                    # 快捷访问图标
@@ -194,25 +190,28 @@ Basalt.DesktopHUB/
 │  │  └─ Measures.inc              # 时间与日期度量
 │  └─ Widgets/Basalt.HUB.Desk/
 │     ├─ Layout.inc                # 面板布局
-│     ├─ Strings.inc               # 组件文案与路径
+│     ├─ Strings.inc               # 组件文案与资源名称
+│     ├─ Settings.inc              # 快捷入口目标路径
 │     ├─ Styles.inc                # 卡片样式
 │     └─ Modules/
 │        ├─ Header.inc
 │        ├─ QuickAccess.inc
 │        ├─ AccessItems/            # 六组访问卡片
 │        └─ Footer.inc
+├─ .editorconfig                   # Strings.inc 编辑器编码约束
 ├─ .gitattributes                  # 编码、换行与 LFS 规则
 └─ .gitignore
 ```
 
 ## 编码约定
 
-- 两个 `Strings.inc` 使用 **UTF-16 LE with BOM**，用于可靠保存中文文本
+- 所有 `Strings.inc` 使用 **UTF-16 LE with BOM**，用于可靠保存中文文本
 - 其他 `.ini` 与 `.inc` 文件作为普通文本管理
 - Rainmeter 配置文件在工作区使用 CRLF
 - PNG、字体、归档和 `.rmskin` 文件由 Git LFS 管理
+- `.editorconfig` 与 VS Code EditorConfig 扩展共同约束字符串表编码
 
-编辑字符串表时，请确认编辑器没有擅自把文件转换成无 BOM 的 UTF-8。
+VS Code 会推荐安装 EditorConfig 扩展。编辑字符串表时，请确认状态栏显示 UTF-16 LE，不要将其转换成无 BOM 的 UTF-8。
 
 ## 开发状态
 
@@ -223,5 +222,5 @@ Basalt.DesktopHUB/
 <div align="center">
   <br>
   <img src="@Resources/Assets/Logos/Main.png" width="96" alt="StarTrack Confederation">
-  <p><sub>We Chart The PATH. We Build The Future. We Are One.</sub></p>
+  <p><sub>We Chart the Path. We Build the Future. We Are One.</sub></p>
 </div>
