@@ -10,5 +10,5 @@ X=#SectionTitleX#
 Y=#SectionTitleY#
 Text=#SectionTitle#
 MeterStyle=MeterStylePrimary
-FontColor=#ColorNetralForegroundSecondary#
+FontColor=#ColorNeutralForegroundSecondary#
 FontSize=#SectionTitleSize#

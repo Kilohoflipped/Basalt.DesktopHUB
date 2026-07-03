@@ -64,9 +64,9 @@ ColorSubtleBrandActionForegroundSelected=#ColorBrandForeground#
 ; 静止时不产生背景；Hover、Pressed、Selected 时出现低强调中性填充。
 ; 适用于工具栏图标、卡片角落按钮、弱操作入口等。
 ColorSubtleActionBackground=#ColorTransparentBackground#
-ColorSubtleActionBackgroundHover=#ColorSubtleBackgroundHover#
-ColorSubtleActionBackgroundPressed=#ColorSubtleBackgroundPressed#
-ColorSubtleActionBackgroundSelected=#ColorSubtleBackgroundSelected#
+ColorSubtleActionBackgroundHover=#ColorNeutralBackgroundSubtleHover#
+ColorSubtleActionBackgroundPressed=#ColorNeutralBackgroundSubtlePressed#
+ColorSubtleActionBackgroundSelected=#ColorNeutralBackgroundSubtleSelected#
 
 ; 透明操作。
 ; 所有状态均不通过背景表达反馈。

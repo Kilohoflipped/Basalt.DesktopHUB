@@ -73,4 +73,4 @@ Y=#FooterBarsNeutralY#
 Text=#FooterBarsNeutral#
 FontSize=#FooterBarsNeutralSize#
 MeterStyle=MeterStyleTitleBold
-FontColor=#ColorNeutralForeground#
+FontColor=#ColorNeutralForegroundPrimary#
